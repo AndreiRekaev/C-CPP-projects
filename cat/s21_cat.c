@@ -1,4 +1,4 @@
-# My cat utility educational version program
+# My cat educational version of utility
 
 #include "./s21_cat.h"
 
