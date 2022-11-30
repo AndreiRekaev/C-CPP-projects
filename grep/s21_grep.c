@@ -71,7 +71,7 @@ void grep_file_process(char *filename, FILE *file) {
   int flag = 0, line_count = 0, match_count = 0, additional_eol = 0;
   char *line = NULL;
   size_t len;
-  if (gf.i) flag = REG_ICASE;
+  if (gf.i) flag = REG_ICASE; // TODO: здесь можно добавить flag = REG_NEWLINE для игнорирования пустых строк при подсчете совпадений
   while (getline(&line, &len, file) != -1) {
     line_count++;
     int cp = check_pattern(line, pattern_size, patterns, flag);
@@ -114,7 +114,7 @@ void output_match(char *line, int pattern_size, char **patterns, int flag) {
   char msgbuf[100];
   char *match, *start, *end;
   for (int i = 0; i < pattern_size; i++) {
-    int regresult = regcomp(&regex, patterns[i], flag);
+    int regresult = regcomp(&regex, patterns[i], flag); // TODO: здесь можно добавить flag = REG_NEWLINE для игнорирования пустых строк при подсчете совпадений
     if (regresult) {
       fprintf(stderr, "Couldn't compile regular expression\n");
     } else {
