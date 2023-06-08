@@ -1,0 +1,60 @@
+Project name: C7_SmartCalc_v1.0-0
+Author: louvenia
+
+Project description:
+The program "Calculator" with a graphical user interface developed on Qt was implemented.
+
+The first page of the program displays a calculator that accepts as input both integers and real numbers written through a dot.
+Also, entering values is possible through the keyboard and using the buttons in the application.
+The calculation is performed after the full input of the expression to be calculated, pressing enter on the keyboard and pressing the = symbol.
+Arbitrary bracket arithmetic expressions are calculated in infix notation;
+Calculation of arbitrary bracket arithmetic expressions in infix notation with substitution of the value of the variable x as a number;
+
+On the second page of the program, it is possible to plot a graph of a function specified using an expression in infix notation with a variable x.
+The user is given the opportunity to change the scale and drag the chart range.
+To build a graph, you must specify the range of x values, the display area of ​​definition and the area of \u200b\u200bvalue and step.
+If the construction step has not been entered, then the default value is 0.01.
+Next, to plot, you must click the "Create Graph" button, the "Clear Graph" button is responsible for clearing the fields for new input values.
+
+On the third page of the program is a loan calculator for self-calculation of the loan.
+The input values are: total loan amount, term (in months), interest rate and type (annuity, differentiated).
+Next, to calculate the loan, you must click the "Calculate" button, the "Clear" button is responsible for clearing the fields for new input values.
+The calculated values are displayed at the output: monthly payment, overpayment on the loan and total payment.
+
+On the fourth page of the program there is a deposit calculator for self-calculation of the deposit.
+The input values are: deposit amount, placement period (in months), interest rate, tax rate, frequency of payments, capitalization of interest, list of replenishments and list of partial withdrawals.
+If no tax rate has been entered, then the default value is 13%.
+Next, to calculate the deposit, you must click the "Calculate" button, the "Clear" button is responsible for clearing the fields for new input values.
+The calculated values are displayed at the output: accrued interest, tax amount and deposit amount by the end of the term.
+
+Installation instructions:
+The build of the program can be customized using a Makefile with the standard set of targets for GNU programs: all, install, uninstall, clean, dvi, dist, tests, gcov_report.
+
+When you enter
+make all: will remove files, compile and test.
+
+make s21_smartcalc.a: This will compile.
+
+make tests: testing will be done.
+
+make gcov_report: An HTML report will be generated about the testing performed, the results of unit tests covering modules related to expression evaluation using the Check library.
+
+make check: Performs style testing with clang-format.
+
+make leaks: Performs leak testing.
+
+make install: installs the application using the cmake makefile.
+
+make uninstall: Uninstalls the application files using the cmake Makefile and *.app file.
+
+make dist: Creates a tar file for the src folder.
+
+make dist_clean: Removes the generated tar file.
+
+make dvi: builds DVI files for all TeXinfo documentation by translating the original Texinfo documentation into HTML format.
+
+make doxygen: HTML format documentation.
+
+make dvi_clean: Remove DVI file.
+
+make clean: removes those files from the current directory that were created when the program was built.
