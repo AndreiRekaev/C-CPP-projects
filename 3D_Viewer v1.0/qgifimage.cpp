@@ -232,7 +232,7 @@ bool QGifImagePrivate::load(QIODevice *device) {
     frameInfos.append(frameInfo);
   }
 
-  DGifCloseFile(gifFile, &error);
+  DGifCloseFile(gifFile);
   return true;
 }
 
