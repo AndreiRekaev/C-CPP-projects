@@ -27,6 +27,7 @@ OpenGLWidget::~OpenGLWidget() {
 }
 
 void OpenGLWidget::initializeGL() {
+  initializeOpenGLFunctions();
   QOpenGLFunctions *pFunc = QOpenGLContext::currentContext()->functions();
   pFunc->glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
   glClearDepth(1.0);
